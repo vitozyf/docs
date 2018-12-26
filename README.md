@@ -1,14 +1,14 @@
 # docs
-> documentation for znl-document.
+> documentation for znl-document
 
 ## Development
 ```shell
-make dev
+npm dev
 ```
 
 ## Deploy
 ```shell
-make deploy
+npm deploy
 ```
 
 
