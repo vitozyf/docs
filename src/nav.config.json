@@ -1,0 +1,42 @@
+[
+  {
+    "title": "基础组件",
+    "list": [
+      {
+        "path": "/vue-znl-ui",
+        "name": "vue-znl-ui 基础组件"
+      },
+      {
+        "path": "/znl-table",
+        "name": "znl-table 表格"
+      }
+    ]
+  },
+  {
+    "title": "业务组件",
+    "list": [
+      {
+        "path": "/znl-stock",
+        "name": "Stock 库存"
+      }
+    ]
+  },
+  {
+    "title": "工具组件",
+    "list": [
+      {
+        "path": "/znl-voca",
+        "name": "Voca 字符处理"
+      }
+    ]
+  },
+  {
+    "title": "通用样式",
+    "list": [
+      {
+        "path": "/znl-line",
+        "name": "Line 线条通用"
+      }
+    ]
+  }
+]
