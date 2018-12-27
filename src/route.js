@@ -49,7 +49,7 @@ const route = {
     component: resolve => require(['../node_modules/znl-table/README.md'], resolve),
     version: require('../node_modules/znl-table/package.json').version,
     name: require('../node_modules/znl-table/package.json').name,
-    keywords: ['vue', 'table'],
+    keywords: require('../node_modules/znl-table/package.json').keywords,
   },
   '/zh-cn/znl-stock': {
     title: 'Stock',
