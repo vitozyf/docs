@@ -1,13 +1,45 @@
-# 快速上手
+# 文档格式
 
-本节将介绍如何在项目中使用 组件库。
+本节将介绍如何在项目中使用 md编写项目文档。
 
 -----------
 
-## 引入 组件库
-
-你可以引入整个 组件库，或是根据需要仅引入部分组件。我们先介绍如何引入完整的 组件库。
+## 建立项目根目录下的 README.md 文件
 
 
+示例1 文档部分的样式
 
-各个组件的使用方法请参阅它们各自的文档。
+- 在文档最上层写style标签即可
+```html
+<style>
+  .demo-box{
+    .znl-button{
+      margin-right: 10px;
+    }
+    .znl-row{
+      padding: 10px 0;
+    }
+  }
+</style>
+```
+
+示例2 文档部分的script
+
+- 在文档最上层写script标签即可
+``` javascript
+<script>
+  <script>
+  export default {
+      data() {
+          return {
+              a: 1
+          }
+      }
+  }
+</script>
+```
+
+示例2 文档部分的demo(实际效果和demo代码)
+
+- 将template代码写在 ::: ```html  ``` :::中
+参考 现有的md文件

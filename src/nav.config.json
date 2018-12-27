@@ -4,11 +4,11 @@
     "list": [
       {
         "path": "/vue-znl-ui",
-        "name": "vue-znl-ui 基础组件"
+        "name": "vue-znl-ui"
       },
       {
         "path": "/znl-table",
-        "name": "znl-table 表格"
+        "name": "znl-table"
       }
     ]
   },
@@ -17,7 +17,7 @@
     "list": [
       {
         "path": "/znl-stock",
-        "name": "Stock 库存"
+        "name": "Stock"
       }
     ]
   },
@@ -26,7 +26,7 @@
     "list": [
       {
         "path": "/znl-voca",
-        "name": "Voca 字符处理"
+        "name": "Voca"
       }
     ]
   },
@@ -35,7 +35,7 @@
     "list": [
       {
         "path": "/znl-line",
-        "name": "Line 线条通用"
+        "name": "Line"
       }
     ]
   }

@@ -13,7 +13,7 @@
         <router-link
           class="nav-link"
           :to="{ path: '/' + $route.meta.language + '/quickstart' }"
-        >快速开始</router-link>
+        >文档格式</router-link>
       </li>
       <li>
         <router-link
@@ -21,7 +21,7 @@
           active-class="is-active"
           exact
           :to="{ path: '/' + $route.meta.language + '/repositories' }"
-        >子项目</router-link>
+        >全部组件</router-link>
       </li>
 
       <template v-for="(group, index) in navs">
@@ -38,9 +38,6 @@
           <ul
             v-show="group.visible"
             transition="slidedown"
-            :style="{
-              maxHeight: group.list.length * 36 + 'px'
-            }"
           >
             <li
               v-for="(item, j) in group.list"
@@ -50,9 +47,27 @@
                 class="nav-link"
                 :to="{ path: '/' + $route.meta.language + item.path }"
                 active-class="is-active"
-                v-text="item.name"
               >
+                <div>
+                  <span
+                    calss="routename"
+                    :style="{fontWeight: '600'}"
+                  >
+                    {{item.name}}
+                  </span>
+                  {{item.version ? `--${item.version}` : ''}}
+                </div>
               </router-link>
+              <div
+                v-if="item.keywords"
+                class="keywords"
+              >
+                <span
+                  v-for="(kwd, index) in item.keywords"
+                  :key="index"
+                  @click="() => toRepositories(kwd)"
+                >{{kwd}}</span>
+              </div>
             </li>
           </ul>
         </div>
@@ -62,19 +77,27 @@
 </template>
 
 <script>
-import NavsConfig from "../nav.config.json";
-
-NavsConfig.map(item => {
-  item.visible = true;
-  return item;
-});
+import routerMixin from "./routerMixin";
 
 export default {
-  data() {
-    return {
-      navs: NavsConfig,
-      isZH: /zh/.test(navigator.language)
-    };
+  mixins: [routerMixin],
+  methods: {
+    toRepositories(keyword) {
+      this.$router.replace({
+        name: "xqdmRightForm",
+        params: {
+          val: null,
+          change_id: "000" + new Date().getSeconds(),
+          type: "add"
+        }
+      });
+      this.$router.push({
+        name: "/zh-cn/repositories",
+        params: {
+          keyword
+        }
+      });
+    }
   }
 };
 </script>
@@ -126,6 +149,15 @@ export default {
 
   &:hover {
     color: #4078c0;
+  }
+}
+.keywords {
+  padding: 5px 0;
+  span {
+    background: #ddd;
+    padding: 3px 5px;
+    margin-right: 5px;
+    cursor: pointer;
   }
 }
 </style>

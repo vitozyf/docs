@@ -17,7 +17,7 @@ const route = {
     component: resolve => require(['./pages/README.md'], resolve),
     default_lang: defaultLang,
     langs: LANG_CONFIG.langs,
-    title: '选择语言',
+    title: '',
     redirect: '/zh-cn'
   },
   '/zh-cn': {
@@ -26,24 +26,30 @@ const route = {
     component: resolve => require(['./pages/zh-cn/README.md'], resolve)
   },
   '/zh-cn/repositories': {
-    title: '子项目',
+    title: '全部组件',
     language: 'zh-cn',
-    component: resolve => require(['./pages/zh-cn/repositories.md'], resolve)
+    component: resolve => require(['./pages/repositories.vue'], resolve)
   },
   '/zh-cn/quickstart': {
-    title: '快速上手',
+    title: '文档格式',
     language: 'zh-cn',
     component: resolve => require(['./pages/zh-cn/quickstart.md'], resolve)
   },
   '/zh-cn/vue-znl-ui': {
     title: 'vue-znl-ui',
     language: 'zh-cn',
-    component: resolve => require(['./components/iframe.vue'], resolve)
+    component: resolve => require(['./components/iframe.vue'], resolve),
+    version: require('../node_modules/vue-znl-ui/package.json').version,
+    keywords: require('../node_modules/vue-znl-ui/package.json').keywords,
+
   },
   '/zh-cn/znl-table': {
     title: 'znl-table',
     language: 'zh-cn',
-    component: resolve => require(['../node_modules/znl-table/README.md'], resolve)
+    component: resolve => require(['../node_modules/znl-table/README.md'], resolve),
+    version: require('../node_modules/znl-table/package.json').version,
+    name: require('../node_modules/znl-table/package.json').name,
+    keywords: ['vue', 'table'],
   },
   '/zh-cn/znl-stock': {
     title: 'Stock',

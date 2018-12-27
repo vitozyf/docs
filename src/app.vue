@@ -21,7 +21,7 @@
           <span></span>
         </button>
       </div> -->
-      <router-view></router-view>
+      <router-view :key="key"></router-view>
     </section>
     <!-- <section class="col-4 demo">
       <phone></phone>
@@ -59,6 +59,14 @@ export default {
       event.stopPropagation();
       this.navbarShow = !this.navbarShow;
     }
+  },
+  computed: {
+    key() {
+      //解决同一组件路由跳转，数据不刷新问题
+      return this.$route.name !== undefined
+        ? this.$route.name + new Date()
+        : this.$route + new Date();
+    }
   }
 };
 </script>
@@ -87,7 +95,7 @@ export default {
 }
 
 .navbar {
-  min-width: 140px;
+  min-width: 200px;
   padding-left: 0;
 }
 

@@ -5,3 +5,5 @@
 ---------
 
 ## [vue-znl-ui](https://vitozyf.github.io/vue-znl-ui/#/zh-CN/component/quickstart)
+
+<router-link to="/zh-cn/znl-table">znl-table</a>
