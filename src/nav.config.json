@@ -25,8 +25,8 @@
     "title": "工具组件",
     "list": [
       {
-        "path": "/znl-voca",
-        "name": "Voca"
+        "path": "/znl-tool-regs",
+        "name": "Regs"
       }
     ]
   },

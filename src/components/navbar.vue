@@ -3,7 +3,7 @@
     <ul>
       <li>
         <router-link
-          class="nav-link"
+          class="nav-link nav-out"
           active-class="is-active"
           exact
           :to="{ path: '/' + $route.meta.language }"
@@ -11,13 +11,13 @@
       </li>
       <li>
         <router-link
-          class="nav-link"
+          class="nav-link nav-out"
           :to="{ path: '/' + $route.meta.language + '/quickstart' }"
         >文档格式</router-link>
       </li>
       <li>
         <router-link
-          class="nav-link"
+          class="nav-link nav-out"
           active-class="is-active"
           exact
           :to="{ path: '/' + $route.meta.language + '/repositories' }"
@@ -42,6 +42,7 @@
             <li
               v-for="(item, j) in group.list"
               :key="j"
+              class="nav-list-row"
             >
               <router-link
                 class="nav-link"
@@ -124,7 +125,7 @@ export default {
   color: #4c555a;
   font-size: 14px;
   height: 100%;
-  padding: 20px 0 20px 20px;
+  padding: 20px 0 20px 0px;
 }
 
 .nav-label {
@@ -132,29 +133,38 @@ export default {
   font-weight: bold;
   padding: 8px;
   display: block;
-  margin-left: -16px;
+  padding-left: 10px;
 }
 
 .nav-link {
-  padding: 8px;
+  padding: 8px 0;
   display: block;
   text-decoration: none;
   color: inherit;
   transition: color 0.2s;
 
   &.is-active {
-    color: #4078c0;
+    color: #ee7700;
     border-right: 2px solid;
   }
 
   &:hover {
-    color: #4078c0;
+    color: #ee7700;
   }
+}
+.nav-out {
+  padding-left: 10px;
+}
+.nav-list-row {
+  background-color: #f5f5f5;
+  margin: 5px 0;
+  padding-left: 30px;
+  // border-bottom: 1px dashed #ccc;
 }
 .keywords {
   padding: 5px 0;
   span {
-    background: #ddd;
+    background: #e6e6e6;
     padding: 3px 5px;
     margin-right: 5px;
     cursor: pointer;

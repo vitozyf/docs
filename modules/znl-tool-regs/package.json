@@ -1,0 +1,16 @@
+{
+  "name": "znl-tool-regs",
+  "version": "1.0.0",
+  "description": "常用正则表达式",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "reg",
+    "tool"
+  ],
+  "author": "zhangyongfeng",
+  "license": "ISC",
+  "qq": "535069214"
+}

@@ -4,10 +4,6 @@
 
 ---------
 
-version 版本
-name: name
-keywords
-
 ## 准备工作
 
 ### 下载nrm管理npm源
@@ -51,6 +47,21 @@ nrm use name
 一般情况下，只需要切换到下载地址即可，只有开发组件完成的时候需要上传进仓库再切换到上传源
 ```
 
+## 组件根路径下的package.json文件
+
+本文档需要提取组件项目根路径下的package.json以下字段
+
+```javascript
+{
+    version: 版本号（必填）
+    name: 组建名称（必填）
+    keywords: 标签、关键字数组
+    author: 作者
+    description: 文档描述
+    qq: QQ号码
+}
+
+```
 
 ## 上传组件
 

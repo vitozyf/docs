@@ -41,6 +41,8 @@ const route = {
     component: resolve => require(['./components/iframe.vue'], resolve),
     version: require('../node_modules/vue-znl-ui/package.json').version,
     keywords: require('../node_modules/vue-znl-ui/package.json').keywords,
+    author: require('../node_modules/vue-znl-ui/package.json').author,
+    description: require('../node_modules/vue-znl-ui/package.json').description,
 
   },
   '/zh-cn/znl-table': {
@@ -50,21 +52,29 @@ const route = {
     version: require('../node_modules/znl-table/package.json').version,
     name: require('../node_modules/znl-table/package.json').name,
     keywords: require('../node_modules/znl-table/package.json').keywords,
+    author: require('../node_modules/znl-table/package.json').author,
+    description: require('../node_modules/znl-table/package.json').description,
   },
   '/zh-cn/znl-stock': {
     title: 'Stock',
     language: 'zh-cn',
     component: resolve => require(['./pages/zh-cn/Stock.md'], resolve)
   },
-  '/zh-cn/znl-voca': {
-    title: 'Voca',
-    language: 'zh-cn',
-    component: resolve => require(['./pages/zh-cn/Voca.md'], resolve)
-  },
   '/zh-cn/znl-line': {
     title: 'Line',
     language: 'zh-cn',
     component: resolve => require(['./pages/zh-cn/Line.md'], resolve)
+  },
+  '/zh-cn/znl-tool-regs': {
+    title: 'Regs',
+    language: 'zh-cn',
+    component: resolve => require(['../modules/znl-tool-regs/README.md'], resolve),
+    version: require('../modules/znl-tool-regs/package.json').version,
+    name: require('../modules/znl-tool-regs/package.json').name,
+    keywords: require('../modules/znl-tool-regs/package.json').keywords,
+    author: require('../modules/znl-tool-regs/package.json').author,
+    description: require('../modules/znl-tool-regs/package.json').description,
+    qq: require('../modules/znl-tool-regs/package.json').qq,
   }
 
 };
